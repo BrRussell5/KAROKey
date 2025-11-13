@@ -3,62 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KARO - Home</title>
+  <title>Upload a Song</title>
   <style>
     body {
       background-color: #111;
       color: #fff;
       font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
     }
 
-    .logo {
-      width: 300px;
-      height: 300px;
+    .upload-container {
       background-color: #1a1a1a;
-      border: 3px solid #8230c9;
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 25px rgba(130, 48, 201, 0.6);
-      margin-bottom: 40px;
-    }
-
-    .logo img {
-      max-width: 80%;
-      max-height: 80%;
+      border: 2px solid #8230c9;
       border-radius: 15px;
+      padding: 90px; /* was 30px — tripled */
+      width: 900px;  /* was 300px — tripled */
+      text-align: center;
+      box-shadow: 0 0 40px rgba(130, 48, 201, 0.6);
     }
 
-    .start-btn {
+    h2 {
+      color: #e391ff;
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+
+    label {
+      display: block;
+      color: #d6a6ff;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: left;
+      font-size: 1.2em;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      margin-bottom: 40px;
+      background-color: #333;
+      color: #fff;
+      font-size: 1.1em;
+    }
+
+    .upload-btn {
       background-color: #b366ff;
       color: #fff;
       border: none;
-      padding: 12px 25px;
+      padding: 20px 40px;
       border-radius: 10px;
       cursor: pointer;
       font-weight: bold;
-      font-size: 16px;
-      transition: background-color 0.2s ease, transform 0.2s ease;
+      font-size: 1.2em;
+      transition: background-color 0.2s ease;
     }
 
-    .start-btn:hover {
+    .upload-btn:hover {
       background-color: #9c4aff;
-      transform: scale(1.05);
     }
 
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="karo-logo.png" alt="KARO Logo">
+  <div class="upload-container">
+    <h2>Upload a Song</h2>
+    <label for="link">Link</label>
+    <input type="text" id="link" placeholder="Enter song link here...">
+    <button class="upload-btn">Upload</button>
   </div>
-  <button class="start-btn" onclick="window.location.href='upload.html'">Get Started</button>
 </body>
 </html>
